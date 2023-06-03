@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AracKiralamaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AracDisDonanim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDArac" Type="Int32" />
+    <Property Name="FarLed" Type="Boolean" />
+    <Property Name="FarSis" Type="Boolean" />
+    <Property Name="Sunroof" Type="Boolean" />
+    <Property Name="ElektrikliAyna" Type="Boolean" />
+    <Property Name="ParkSensoru" Type="Boolean" />
+    <Property Name="OtomatikKatlananAyna" Type="Boolean" />
+    <Property Name="RomorkDemiri" Type="Boolean" />
+    <Property Name="ParkAsistani" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AracGuvenlik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDArac" Type="Int32" />
+    <Property Name="ABS" Type="Boolean" />
+    <Property Name="YokusDestegi" Type="Boolean" />
+    <Property Name="HavaYastigi" Type="Boolean" />
+    <Property Name="CocukKilidi" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AracIcDonanım">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDArac" Type="Int32" />
+    <Property Name="DeriKoltuk" Type="Boolean" />
+    <Property Name="SogutmaliKoltuk" Type="Boolean" />
+    <Property Name="YolBilgisayarı" Type="Boolean" />
+    <Property Name="KumasKoltuk" Type="Boolean" />
+    <Property Name="Klima" Type="Boolean" />
+    <Property Name="HidrolikDireksiyon" Type="Boolean" />
+    <Property Name="HizSabitleyici" Type="Boolean" />
+    <Property Name="GeriGorusKamera" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AracMarka">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Ilanlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDMarka" Type="Int32" />
+    <Property Name="IDModel" Type="Int32" />
+    <Property Name="IDMusteri" Type="Int32" />
+    <Property Name="Fiyat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Kilometre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Yil" Type="DateTime" Precision="0" />
+    <Property Name="Yakit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Vites" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kasa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotorGucu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotorHacmi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cekis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IlanTarihi" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDMarka" Type="Int32" />
+    <Property Name="ModelAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAd" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TCKimlik" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Cinsiyet" Type="Boolean" />
+    <Property Name="Eposta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SifreHash" Type="Binary" MaxLength="500" FixedLength="false" />
+    <Property Name="SifreSalt" Type="Binary" MaxLength="500" FixedLength="false" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="0" />
+    <Property Name="SonGirisTarihi" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SifreHash" Type="Binary" MaxLength="500" FixedLength="false" />
+    <Property Name="SifreSalt" Type="Binary" MaxLength="500" FixedLength="false" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="0" />
+    <Property Name="SonGirisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="YetkiSeviyesi" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="AracKiralamaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AracDisDonanim" EntityType="Self.AracDisDonanim" />
+    <EntitySet Name="AracGuvenlik" EntityType="Self.AracGuvenlik" />
+    <EntitySet Name="AracIcDonanım" EntityType="Self.AracIcDonanım" />
+    <EntitySet Name="AracMarka" EntityType="Self.AracMarka" />
+    <EntitySet Name="Ilanlar" EntityType="Self.Ilanlar" />
+    <EntitySet Name="Model" EntityType="Self.Model" />
+    <EntitySet Name="Musteri" EntityType="Self.Musteri" />
+    <EntitySet Name="Personel" EntityType="Self.Personel" />
+  </EntityContainer>
+</Schema>

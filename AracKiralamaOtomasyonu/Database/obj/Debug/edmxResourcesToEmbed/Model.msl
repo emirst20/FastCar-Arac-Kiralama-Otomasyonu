@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AracKiralamaModelStoreContainer" CdmEntityContainer="AracKiralamaEntities">
+    <EntitySetMapping Name="AracDisDonanim">
+      <EntityTypeMapping TypeName="AracKiralamaModel.AracDisDonanim">
+        <MappingFragment StoreEntitySet="AracDisDonanim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDArac" ColumnName="IDArac" />
+          <ScalarProperty Name="FarLed" ColumnName="FarLed" />
+          <ScalarProperty Name="FarSis" ColumnName="FarSis" />
+          <ScalarProperty Name="Sunroof" ColumnName="Sunroof" />
+          <ScalarProperty Name="ElektrikliAyna" ColumnName="ElektrikliAyna" />
+          <ScalarProperty Name="ParkSensoru" ColumnName="ParkSensoru" />
+          <ScalarProperty Name="OtomatikKatlananAyna" ColumnName="OtomatikKatlananAyna" />
+          <ScalarProperty Name="RomorkDemiri" ColumnName="RomorkDemiri" />
+          <ScalarProperty Name="ParkAsistani" ColumnName="ParkAsistani" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AracGuvenlik">
+      <EntityTypeMapping TypeName="AracKiralamaModel.AracGuvenlik">
+        <MappingFragment StoreEntitySet="AracGuvenlik">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDArac" ColumnName="IDArac" />
+          <ScalarProperty Name="ABS" ColumnName="ABS" />
+          <ScalarProperty Name="YokusDestegi" ColumnName="YokusDestegi" />
+          <ScalarProperty Name="HavaYastigi" ColumnName="HavaYastigi" />
+          <ScalarProperty Name="CocukKilidi" ColumnName="CocukKilidi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AracIcDonanım">
+      <EntityTypeMapping TypeName="AracKiralamaModel.AracIcDonanım">
+        <MappingFragment StoreEntitySet="AracIcDonanım">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDArac" ColumnName="IDArac" />
+          <ScalarProperty Name="DeriKoltuk" ColumnName="DeriKoltuk" />
+          <ScalarProperty Name="SogutmaliKoltuk" ColumnName="SogutmaliKoltuk" />
+          <ScalarProperty Name="YolBilgisayarı" ColumnName="YolBilgisayarı" />
+          <ScalarProperty Name="KumasKoltuk" ColumnName="KumasKoltuk" />
+          <ScalarProperty Name="Klima" ColumnName="Klima" />
+          <ScalarProperty Name="HidrolikDireksiyon" ColumnName="HidrolikDireksiyon" />
+          <ScalarProperty Name="HizSabitleyici" ColumnName="HizSabitleyici" />
+          <ScalarProperty Name="GeriGorusKamera" ColumnName="GeriGorusKamera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AracMarka">
+      <EntityTypeMapping TypeName="AracKiralamaModel.AracMarka">
+        <MappingFragment StoreEntitySet="AracMarka">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ilanlar">
+      <EntityTypeMapping TypeName="AracKiralamaModel.Ilanlar">
+        <MappingFragment StoreEntitySet="Ilanlar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDMarka" ColumnName="IDMarka" />
+          <ScalarProperty Name="IDModel" ColumnName="IDModel" />
+          <ScalarProperty Name="IDMusteri" ColumnName="IDMusteri" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="Kilometre" ColumnName="Kilometre" />
+          <ScalarProperty Name="Yil" ColumnName="Yil" />
+          <ScalarProperty Name="Yakit" ColumnName="Yakit" />
+          <ScalarProperty Name="Vites" ColumnName="Vites" />
+          <ScalarProperty Name="Kasa" ColumnName="Kasa" />
+          <ScalarProperty Name="MotorGucu" ColumnName="MotorGucu" />
+          <ScalarProperty Name="MotorHacmi" ColumnName="MotorHacmi" />
+          <ScalarProperty Name="Cekis" ColumnName="Cekis" />
+          <ScalarProperty Name="IlanTarihi" ColumnName="IlanTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Model">
+      <EntityTypeMapping TypeName="AracKiralamaModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDMarka" ColumnName="IDMarka" />
+          <ScalarProperty Name="ModelAd" ColumnName="ModelAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musteri">
+      <EntityTypeMapping TypeName="AracKiralamaModel.Musteri">
+        <MappingFragment StoreEntitySet="Musteri">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="KullaniciAd" ColumnName="KullaniciAd" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="TCKimlik" ColumnName="TCKimlik" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="Eposta" ColumnName="Eposta" />
+          <ScalarProperty Name="SifreHash" ColumnName="SifreHash" />
+          <ScalarProperty Name="SifreSalt" ColumnName="SifreSalt" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="SonGirisTarihi" ColumnName="SonGirisTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personel">
+      <EntityTypeMapping TypeName="AracKiralamaModel.Personel">
+        <MappingFragment StoreEntitySet="Personel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="SifreHash" ColumnName="SifreHash" />
+          <ScalarProperty Name="SifreSalt" ColumnName="SifreSalt" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="SonGirisTarihi" ColumnName="SonGirisTarihi" />
+          <ScalarProperty Name="YetkiSeviyesi" ColumnName="YetkiSeviyesi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

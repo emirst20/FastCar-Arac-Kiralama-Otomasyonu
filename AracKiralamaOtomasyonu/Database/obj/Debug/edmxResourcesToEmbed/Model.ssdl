@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AracKiralamaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AracDisDonanim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDArac" Type="int" />
+    <Property Name="FarLed" Type="bit" />
+    <Property Name="FarSis" Type="bit" />
+    <Property Name="Sunroof" Type="bit" />
+    <Property Name="ElektrikliAyna" Type="bit" />
+    <Property Name="ParkSensoru" Type="bit" />
+    <Property Name="OtomatikKatlananAyna" Type="bit" />
+    <Property Name="RomorkDemiri" Type="bit" />
+    <Property Name="ParkAsistani" Type="bit" />
+  </EntityType>
+  <EntityType Name="AracGuvenlik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDArac" Type="int" />
+    <Property Name="ABS" Type="bit" />
+    <Property Name="YokusDestegi" Type="bit" />
+    <Property Name="HavaYastigi" Type="bit" />
+    <Property Name="CocukKilidi" Type="bit" />
+  </EntityType>
+  <EntityType Name="AracIcDonanım">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDArac" Type="int" />
+    <Property Name="DeriKoltuk" Type="bit" />
+    <Property Name="SogutmaliKoltuk" Type="bit" />
+    <Property Name="YolBilgisayarı" Type="bit" />
+    <Property Name="KumasKoltuk" Type="bit" />
+    <Property Name="Klima" Type="bit" />
+    <Property Name="HidrolikDireksiyon" Type="bit" />
+    <Property Name="HizSabitleyici" Type="bit" />
+    <Property Name="GeriGorusKamera" Type="bit" />
+  </EntityType>
+  <EntityType Name="AracMarka">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ilanlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDMarka" Type="int" />
+    <Property Name="IDModel" Type="int" />
+    <Property Name="IDMusteri" Type="int" />
+    <Property Name="Fiyat" Type="nvarchar" MaxLength="10" />
+    <Property Name="Kilometre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Yil" Type="smalldatetime" />
+    <Property Name="Yakit" Type="nvarchar" MaxLength="20" />
+    <Property Name="Vites" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kasa" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotorGucu" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotorHacmi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cekis" Type="nvarchar" MaxLength="50" />
+    <Property Name="IlanTarihi" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDMarka" Type="int" />
+    <Property Name="ModelAd" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="KullaniciAd" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="15" />
+    <Property Name="TCKimlik" Type="nvarchar" MaxLength="15" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="500" />
+    <Property Name="DogumTarihi" Type="smalldatetime" />
+    <Property Name="Cinsiyet" Type="bit" />
+    <Property Name="Eposta" Type="nvarchar" MaxLength="50" />
+    <Property Name="SifreHash" Type="varbinary" MaxLength="500" />
+    <Property Name="SifreSalt" Type="varbinary" MaxLength="500" />
+    <Property Name="KayitTarihi" Type="smalldatetime" />
+    <Property Name="SonGirisTarihi" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="SifreHash" Type="varbinary" MaxLength="500" />
+    <Property Name="SifreSalt" Type="varbinary" MaxLength="500" />
+    <Property Name="KayitTarihi" Type="smalldatetime" />
+    <Property Name="SonGirisTarihi" Type="smalldatetime" />
+    <Property Name="YetkiSeviyesi" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="AracKiralamaModelStoreContainer">
+    <EntitySet Name="AracDisDonanim" EntityType="Self.AracDisDonanim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AracGuvenlik" EntityType="Self.AracGuvenlik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AracIcDonanım" EntityType="Self.AracIcDonanım" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AracMarka" EntityType="Self.AracMarka" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ilanlar" EntityType="Self.Ilanlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
